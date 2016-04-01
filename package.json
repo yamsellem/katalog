@@ -1,7 +1,31 @@
 {
-  "name": "katalog",
-  "version": "0.0.1",
-  "description": "Classroom practice coding tool",
-  "author": "amsellem.yves@gmail.com",
-  "license": "MIT"
+    "name": "katalog",
+    "version": "0.0.1",
+    "description": "Classroom practice coding tool",
+    "author": "amsellem.yves@gmail.com",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yamsellem/katalog.git"
+    },
+    "scripts": {
+        "start": "webpack-dev-server -d --inline --watch-poll --port 3000"
+    },
+    "dependencies": {
+        "brace": "0.7.x",
+        "jquery": "2.2.x",
+        "lodash": "4.x",
+        "operative": "0.4.x",
+        "acorn": "3.0.x"
+    },
+    "devDependencies": {
+        "chai": "x",
+        "css-loader": "0.23.x",
+        "extract-text-webpack-plugin": "1.0.x",
+        "sass-loader": "3.1.x",
+        "node-sass": "3.4.x",
+        "style-loader": "0.13.x",
+        "webpack": "x",
+        "webpack-dev-server": "x"
+    },
+    "license": "MIT"
 }

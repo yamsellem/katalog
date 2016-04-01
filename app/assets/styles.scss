@@ -1,0 +1,105 @@
+/* reset css */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+$font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$red: #F3654F;
+$green: #26CBC5;
+
+h1 {
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+.flexbox-container {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+	display: flex;
+
+    > div {
+    	width: 50%;
+    }
+}
+
+.left {
+    background-color: #363636;
+    color: white;
+    font-family: $font;
+    font-weight: 300;
+    font-size: 14px;
+    padding: 10px;
+    position: relative;
+
+    > ul {
+        display: flex;
+        list-style-type: none;
+
+        > li {
+            width: 33%;
+            line-height: 40px;
+            height: 40px;
+            text-align: center;
+            display: inline;
+            cursor: pointer;
+            border-left: 2px solid #363636;
+
+            &.active {
+                background: #272822;
+                border-left: 2px solid #5D95FF;
+            }
+        }
+
+        > li:first-child {
+            position: relative;
+            width: 34%;
+
+            > i {
+                content: ' ';
+                position: absolute;
+                right: 15px; top: 15px;
+                width: 8px;
+                height: 8px;
+                border-radius: 5px;
+                background-color: $red;
+
+                &.solved {
+                    background-color: $green;
+                }
+            }
+        }
+    }
+
+    > div {
+        position: absolute;
+        top: 50px; bottom: 40px;
+        left: 10px; right: 10px;
+        background: #272822;
+    }
+
+    > div > div:first-child {
+        padding: 20px;
+    }
+
+    .content {
+        visibility: hidden;
+
+        &.active {
+            visibility: visible;
+        }
+    }
+
+    #js, #html {
+        position: absolute;
+        top: 0; bottom: 0; left: 0; right: 0;
+    }
+}
+
+.right {
+    position: relative;
+    > iframe {
+        position: absolute;
+        display: block;
+        border: 0;
+        height: 100%;
+        width: 100%;
+    }
+}
